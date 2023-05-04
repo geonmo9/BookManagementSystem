@@ -11,6 +11,10 @@ public class BooksManager {
 	BooksManager(Scanner input) {
 		this.input = input;
 	}
+	
+	public void addBook(Book book) {
+		books.add(book);
+	}
 
 	public void checkedOut() {
 		int kind = 0;
@@ -99,8 +103,9 @@ public class BooksManager {
 //        System.out.print("book ID: ");
 //        int bookId = input.nextInt();
 		System.out.println("# of registered books:" + books.size());
-		for (int i = 0; i < books.size(); i++) {
-			books.get(i).printInfo();
+		for (Book book : books) {
+			book.printInfo();
+			book.getParentPhoneNumber();
 		}
 	}
 }

@@ -3,6 +3,28 @@ package book;
 import java.util.Scanner;
 
 public class ChildrenBook extends Book {
+	
+	private String parentPhoneNumber;
+	public ChildrenBook() {
+		super();
+	}
+	public ChildrenBook(String title, int id, String date, String  parentPhoneNumber) {
+		super(title, id, date);
+		this.parentPhoneNumber = parentPhoneNumber;
+	}
+	
+	public String getParentPhoneNumber() {
+		return parentPhoneNumber;
+	}
+	
+	public void setParentPhoneNumber(String parentPhoneNumber) {
+		this.parentPhoneNumber = parentPhoneNumber;
+	}
+//	@Override
+//	public void getParentPhoneNumber() {
+//		System.out.println("Parent phone number: " + parentPhoneNumber);
+//	}
+	
 	public void getUserInput(Scanner input) {
 		System.out.print("title: ");
 		String title = input.next();

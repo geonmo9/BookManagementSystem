@@ -22,6 +22,14 @@ public class Book {
 		this.id = id;
 		this.date = date;
 	}
+	
+//	public void getParentPhoneNumber() {
+//		System.out.println("This is not a children's book. No parent phone number required.");
+//		
+//	}
+	public String getParentPhoneNumber() {
+		return"";
+	}
 
 	public BookKind getKind() {
 		return kind;
